@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gốm sứ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 40px;
+    }
+
+    .logo img {
+      height: 100%;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .poster,
+    .banner,
+    .promotion {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 30px 0 10px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .cart-icon {
+      color: #555;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    footer {
+      color: rgb(2, 0, 0);
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    label[for="check"] {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 99;
+      }
+
+      #check:checked ~ .menu {
+        display: flex;
+      }
+
+      label[for="check"] {
+        display: block;
+      }
+
+      .poster {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .promotion {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <input type="checkbox" id="check">
+    <label for="check" class="hamburger"><i class="fa fa-bars"></i></label>
+
+
+    <div class="menu">
+      <a href="#">Giới thiệu</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">SIÊU DEAL T4 - SALE UPTO 50%</a>
+      <a href="#">BỘ SƯU TẬP</a>
+      <a href="#">VỀ CHÚNG TÔI</a>
+    </div>
+
+    <div class="icons">
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm">
+      </div>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </header>
+
+  <img src="C:\Users\DELL\Downloads\Hình nền máy tính Cá nhân Sổ lưu niệm Tinh tế Tem màu Nâu (1080 x 3240 px) (3240 x 1080 px).png" alt="Poster" class="poster">
+
+  <h2 class="section-title">Gomie ceramic</h2>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/277/1_r8am-sv.jpg" alt="Bộ">
+      <div class="product-info">
+        <span>Bộ đèn giữ nóng cafe - 180.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.chus.vn/images/thumbnails/767/767/detailed/276/1_d59l-b8.jpg" alt="SP2">
+      <div class="product-info">
+        <span>Bình rót sữa lùn - 75.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.chus.vn/images/thumbnails/767/767/detailed/281/1_9oe9-yf.jpg" alt="SP3">
+      <div class="product-info">
+        <span>Bình cắm hoa - 50.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/277/1_axum-bh.jpg" alt="SP4">
+      <div class="product-info">
+        <span>Ấm trà - 300.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title" style="color: red;"> GIẢM 50% CÁC SẢN PHẨM</h2>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/276/1_skxi-lg.jpg" alt="Sale1">
+      <div class="product-info">
+        <span>Lọ đựng tăm - 50.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/279/13_ct52-l0.jpg" alt="Sale2">
+      <div class="product-info">
+        <span>Bộ ấm chén - 580.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/280/1_zvkf-hm.jpg" alt="Sale3">
+      <div class="product-info">
+        <span>cốc cafe - 100.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://chus.vn/images/detailed/276/4_olkr-ip.jpg" alt="Sale4">
+      <div class="product-info">
+        <span>Hũ đựng gia vị - 100.000đ</span>
+        <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.30808-6/480243851_1379052936774691_2308462228668169743_n.png?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=qfgW8ZzHer4Q7kNvwG9Yqua&_nc_oc=AdnJgYsliPpYboNKE3dL5dp_u-jnyjwUr-fduVmqQYQrgkkDvhG1M0PTIjEbdvovKjE&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=gVZlA8-6hyoC-uhTmOV7xQ&oh=00_AfGRwnP4lVJrFR35i2K-JxhIbFNtvN6hp4rXX6kL3lf6vQ&oe=67FBD32D" alt="Quảng cáo cuối" class="promotion">
+
+  <footer>
+    <Span class="footer-content">
+      <span>Họ tên sinh viên: Lê Khánh Ly</span>
+      <span>Lớp: TUD D2024</span>
+      <span>Khoa: Toán - CNTT</span>
+      <span>Mã sinh viên: 224001730</span>
+    </Span>
+  </footer>
+</body>
+</html>
